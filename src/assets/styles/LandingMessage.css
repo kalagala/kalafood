@@ -1,0 +1,15 @@
+.landing-container {
+  height: 30vh;
+  width: 100%;
+  color: #870000;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.landing-container p {
+  margin-top: 10vh;
+}
