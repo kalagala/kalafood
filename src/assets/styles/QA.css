@@ -1,0 +1,27 @@
+.question {
+  text-align: left;
+  padding: 10px;
+  margin-top: 4px;
+  background: #e7e7e7;
+}
+.answer {
+  padding: 10px;
+  text-align: left;
+  margin-top: 2px;
+  background: #e7e7e7;
+}
+.QA {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  color: #870000;
+}
+
+.right {
+  float: right;
+  cursor: pointer;
+}
+
+.hide-answer {
+  display: none;
+}

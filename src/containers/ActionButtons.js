@@ -6,7 +6,7 @@ const ActionButtons = () => {
       <a href="#" className="primary">
         Jiunge
       </a>
-      <a href="#" className="secondary">
+      <a href="#faq" className="secondary">
         Jifunze Zaidi
       </a>
     </div>
