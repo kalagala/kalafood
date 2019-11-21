@@ -1,0 +1,20 @@
+.login-option {
+  border: 2px solid #870000;
+  padding: 5px 10px;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  width: 120px;
+  border-radius: 4px;
+}
+
+.login-option img {
+  width: 18px;
+  margin-right: 10px;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.login-option span {
+  line-height: 18px;
+}

@@ -5,6 +5,8 @@ import "../assets/styles/Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
+      <span>Mawasiliano</span>
+      <br />
       <a href="mailto:kalagalakapunda@gmail.com" target="blank">
         <img src={gmailIcon} />
       </a>

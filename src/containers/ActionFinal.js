@@ -1,10 +1,13 @@
 import React from "react";
 import PrimaryLinkButton from "../components/PrimaryLinkButton";
 import "../assets/styles/ActionFinal.css";
-const ActionFinal = () => {
+import { Link } from "react-router-dom";
+const ActionFinal = props => {
   return (
     <div className="final">
-      <PrimaryLinkButton text="Jiunge Sasa" link="#" />
+      <Link to="/login">
+        <PrimaryLinkButton text="Jiunge Sasa" />
+      </Link>
     </div>
   );
 };

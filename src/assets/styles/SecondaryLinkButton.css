@@ -1,4 +1,4 @@
-span.primary-link-button {
+span.secondary-link-button {
   display: inline-block;
   width: 200px;
   text-align: center;
@@ -6,8 +6,8 @@ span.primary-link-button {
   margin: 5px;
   font-weight: bold;
   border-radius: 5px;
-  background-color: #870000;
-  color: white;
+  border: 2px solid #870000;
+  color: #870000;
   box-sizing: border-box;
 }
 

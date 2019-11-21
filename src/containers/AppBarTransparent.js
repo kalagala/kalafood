@@ -1,12 +1,15 @@
 import React from "react";
 import "../assets/styles/AppBar.css";
+import Logo from "../components/Logo";
+import { Link } from "react-router-dom";
+import ExpandingPrimaryButton from "../components/ExpandingPrimaryButton";
 const AppBarTransparent = () => {
   return (
     <div className="app-bar">
-      <h2 className="logo">KalaFood</h2>
-      <a href="#" className="app-bar-login-button">
-        Ingia
-      </a>
+      <Logo />
+      <Link to="login">
+        <ExpandingPrimaryButton text="Ingia" side="right" />
+      </Link>
     </div>
   );
 };
