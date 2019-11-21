@@ -8,7 +8,7 @@ const Footer = () => {
       <a href="mailto:kalagalakapunda@gmail.com" target="blank">
         <img src={gmailIcon} />
       </a>
-      <a href="https://wa.me/0753304771" target="blank">
+      <a href="https://wa.me/255753304771" target="blank">
         <img src={whatsappIcon} />
       </a>
     </div>
