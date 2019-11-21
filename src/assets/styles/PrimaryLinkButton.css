@@ -1,0 +1,13 @@
+a.primary-link-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #870000;
+  color: white;
+  box-sizing: border-box;
+}

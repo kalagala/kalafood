@@ -1,0 +1,15 @@
+.footer {
+  background: #dfdfdf;
+  padding: 10px;
+  text-align: center;
+}
+.footer a {
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.footer a img {
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}

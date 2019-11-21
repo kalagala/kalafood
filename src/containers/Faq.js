@@ -5,7 +5,7 @@ class Faq extends React.Component {
   render() {
     return (
       <div className="faq-container" id="faq">
-        <h3>Maswali/sFAQs</h3>
+        <h3>Maswali/FAQs</h3>
         <div>
           <QA
             question="KalaFood ni NINI?"

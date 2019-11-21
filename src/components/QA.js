@@ -7,23 +7,25 @@ class QA extends React.Component {
   render() {
     return (
       <div className="QA">
-        <div className="question">
+        <div
+          className="question"
+          onClick={() => {
+            if (this.state.showAnswer) {
+              this.setState({
+                showAnswer: false
+              });
+            } else {
+              this.setState({
+                showAnswer: true
+              });
+            }
+          }}
+        >
           <span>{this.props.question}</span>
           <i
             className={`${
               this.state.showAnswer ? "fa fa-times" : "fa fa-plus"
             } right`}
-            onClick={() => {
-              if (this.state.showAnswer) {
-                this.setState({
-                  showAnswer: false
-                });
-              } else {
-                this.setState({
-                  showAnswer: true
-                });
-              }
-            }}
           ></i>
         </div>
         <div
