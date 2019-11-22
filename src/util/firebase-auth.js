@@ -1,6 +1,6 @@
 const firebaseConfig = {
   apiKey: "AIzaSyCL6eH3fEjpltKSBq7TyO4dESeGSpXt8WM",
-  authDomain: "kalafood-961ba.firebaseapp.com",
+  authDomain: "kalafood.net",
   databaseURL: "https://kalafood-961ba.firebaseio.com",
   projectId: "kalafood-961ba",
   storageBucket: "kalafood-961ba.appspot.com",
