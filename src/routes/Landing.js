@@ -19,5 +19,10 @@ class Landing extends React.Component {
     );
   }
 }
-
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    isLoggedIn: state.auth.isLoggedIn
+  };
+};
 export default Landing;
