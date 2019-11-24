@@ -4,9 +4,11 @@ import "../assets/styles/login-option.css";
 
 import * as firebase from "firebase/app";
 
+import { setAuthLoggedInStatus, setUserDetails } from "../actions";
 // Add the Firebase services that you want to use
 import "firebase/auth";
 import firebaseConfig from "../util/firebase-auth";
+import { connect } from "react-redux";
 class LoginWithFacebook extends React.Component {
   login = () => {
     console.log("were loging your ass in");
@@ -24,8 +26,13 @@ class LoginWithFacebook extends React.Component {
         var user = result.user;
         if (user) {
           console.log("signed in successfully");
-          console.log(user);
-          console.log(token);
+          this.props.setUserDetails(
+            user.email,
+            user.emailVerified,
+            user.uid,
+            user.displayName
+          );
+          this.props.setAuthLoggedInStatus();
         } else {
           console.log("some error occured");
         }
@@ -53,4 +60,6 @@ class LoginWithFacebook extends React.Component {
   }
 }
 
-export default LoginWithFacebook;
+export default connect(null, { setUserDetails, setAuthLoggedInStatus })(
+  LoginWithFacebook
+);

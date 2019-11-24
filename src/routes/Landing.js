@@ -5,8 +5,13 @@ import ActionButtons from "../containers/ActionButtons";
 import Faq from "../containers/Faq";
 import ActionFinal from "../containers/ActionFinal";
 import Footer from "../components/Footer";
+import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 class Landing extends React.Component {
   render() {
+    if (this.props.authed) {
+      return <Redirect to="/home" />;
+    }
     return (
       <div>
         <AppBarTransparent />
@@ -19,10 +24,10 @@ class Landing extends React.Component {
     );
   }
 }
+
 const mapStateToProps = state => {
-  console.log(state);
   return {
-    isLoggedIn: state.auth.isLoggedIn
+    authed: state.auth.loggedIn
   };
 };
-export default Landing;
+export default connect(mapStateToProps, null)(Landing);

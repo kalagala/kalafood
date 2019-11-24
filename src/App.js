@@ -4,7 +4,7 @@ import { Route, Router } from "react-router-dom";
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./util/firebase-auth";
-import { setAuthLoggedInStatus } from "./actions";
+import { setAuthLoggedInStatus, setUserDetails } from "./actions";
 import { connect } from "react-redux";
 import "./assets/styles/app.css";
 import Landing from "./routes/Landing";
@@ -20,12 +20,21 @@ class App extends React.Component {
     }
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
+        this.props.setUserDetails(
+          user.email,
+          user.emailVerified,
+          user.uid,
+          user.displayName,
+          user.photoURL
+        );
         this.props.setAuthLoggedInStatus();
         // User is signed in.
+        console.log(user);
       } else {
         // No user is signed in.
       }
     });
+    console.log("hi");
   }
   render() {
     return (
@@ -47,4 +56,7 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, { setAuthLoggedInStatus })(App);
+export default connect(mapStateToProps, {
+  setAuthLoggedInStatus,
+  setUserDetails
+})(App);

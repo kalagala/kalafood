@@ -2,6 +2,8 @@ import React from "react";
 import googleIcon from "../assets/icons/google.svg";
 import "../assets/styles/login-option.css";
 import * as firebase from "firebase/app";
+import { connect } from "react-redux";
+import { setAuthLoggedInStatus, setUserDetails } from "../actions";
 
 // Add the Firebase services that you want to use
 import "firebase/auth";
@@ -23,8 +25,14 @@ class LoginWithGoogle extends React.Component {
         var user = result.user;
         if (user) {
           console.log("signed in successfully");
-          console.log(user);
-          console.log(token);
+
+          this.props.setUserDetails(
+            user.email,
+            user.emailVerified,
+            user.uid,
+            user.displayName
+          );
+          this.props.setAuthLoggedInStatus();
         } else {
           console.log("some error occured");
         }
@@ -51,5 +59,12 @@ class LoginWithGoogle extends React.Component {
     );
   }
 }
-
-export default LoginWithGoogle;
+const mapStateToProps = state => {
+  return {
+    authed: state.auth.loggedIn
+  };
+};
+export default connect(mapStateToProps, {
+  setAuthLoggedInStatus,
+  setUserDetails
+})(LoginWithGoogle);

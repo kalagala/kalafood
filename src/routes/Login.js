@@ -8,15 +8,24 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 class Login extends React.Component {
   render() {
-    console.log(this.props.history.action);
     if (this.props.authed) {
+      console.log("no need to login already authed");
       if (this.props.history.action === "REPLACE") {
         //this.props.history.push(this.props.location.state.from);
-        console.log(this.props.location.state.from);
+        //console.log(this.props.location.state.from);
         return (
           <Redirect
             to={{
               pathname: this.props.location.state.from.pathname,
+              state: { from: this.props.location }
+            }}
+          />
+        );
+      } else {
+        return (
+          <Redirect
+            to={{
+              pathname: "/home",
               state: { from: this.props.location }
             }}
           />
